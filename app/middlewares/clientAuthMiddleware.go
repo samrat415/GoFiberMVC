@@ -1,9 +1,9 @@
 package middlewares
 
 import (
-	"eventsapp/app/Resources"
-	"eventsapp/app/initializers"
-	"eventsapp/app/models"
+	"GoFiberMVC/app/Resources"
+	"GoFiberMVC/app/initializers"
+	"GoFiberMVC/app/models"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gofiber/fiber/v2"

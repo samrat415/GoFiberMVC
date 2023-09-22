@@ -1,7 +1,7 @@
 package providers
 
 import (
-	"eventsapp/app/routes"
+	"GoFiberMVC/app/routes"
 	"github.com/gofiber/fiber/v2"
 )
 

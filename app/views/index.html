@@ -34,6 +34,8 @@
 
 <div class="container" style="margin-left: 40px; margin-bottom: 30px;">
     <h4>Users Table</h4>
+    <p>{{.Title}}</p>
+    <p>{{.Message}}</p>
 
 </div>
 
@@ -46,14 +48,16 @@
     <th>Actions</th>
 </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>
-                <a href="">Delete</a>
-                <a href="">Edit</a>
-            </td>
-        </tr>
+    {{range .Clients}}
+    <tr>
+        <td>{{.Id}}</td>
+        <td>{{.MobileNumber}}</td>
+        <td>
+            <a href="">Delete</a>
+            <a href="">Edit</a>
+        </td>
+    </tr>
+    {{end}}
     </tbody>
 </table>
 </body>

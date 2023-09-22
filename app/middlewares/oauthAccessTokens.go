@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"eventsapp/app/initializers"
+	"GoFiberMVC/app/initializers"
 	"time"
 )
 

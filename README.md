@@ -1,7 +1,7 @@
-# Go Fiber MVC App
+# Go Fiber MVC App 
 
 This is a Go web application built using the Fiber framework, following the MVC (Model-View-Controller) architectural pattern. The project structure is inspired by Laravel, providing a familiar and organized approach to building web applications.
-
+This Project is fully API based meading currently there is no view implementation here
 ## Features
 
 - MVC pattern: Organize your code into Models, Views, and Controllers for a structured and maintainable application.

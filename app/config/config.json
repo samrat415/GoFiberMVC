@@ -20,13 +20,24 @@
     "time": 1
   },
   "votingResource": {
-    "url": "103.168.87.54",
-    "eventList": "/api/event/list",
-    "denominationList": "/api/denomination/list",
-    "voteParticipant": "/api/vote/participant",
-    "voteHistory": "/api/vote/history",
-    "eventCategory": "/api/category",
-    "groupList": "/api/event/group/list",
-    "participantList": "/api/event/participant/list"
+    "url": "https://stageapi.ncash.online",
+    "fetchCustomerDetails": "/api/v1/profiles/fetch_customer_details",
+    "createCustomer": "/api/v1/profiles/create_customer",
+    "fetchMerchantDetails": "/api/v1/profiles/fetch_merchant_details",
+    "newByStores": "/api/v1/profiles/nearby_merchants",
+    "searchStores": "/api/v1/profiles/search_the_store",
+    "updateCustomerFcm": "/api/v1/profiles/update_fcm",
+    "fetchQsrMenu": "/api/v1/qsr/fetch_menu",
+    "updateQsrOrder": "/api/v1/qsr/update_order",
+    "listOrder": "/api/v1/profiles/orders",
+    "orderInfo": "/api/v1/profiles/order",
+    "addAddress": "/api/event/participant/list",
+    "editAddress": "/api/event/participant/list",
+    "deleteAddress": "/api/event/participant/list",
+    "fetchGroceryMenu": "/api/event/participant/list",
+    "groceryPlaceOrder": "/api/event/participant/list",
+    "groceryProcessOrder": "/api/event/participant/list",
+    "createGroceryItem": "/api/event/participant/list",
+    "viewGroceryOrderInfo": "/api/event/participant/list",
   }
 }

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"eventsapp/app/initializers"
-	"eventsapp/app/providers"
-	"eventsapp/app/routes"
+	"GoFiberMVC/app/initializers"
+	"GoFiberMVC/app/providers"
+	"GoFiberMVC/app/routes"
 )
 
 func main() {

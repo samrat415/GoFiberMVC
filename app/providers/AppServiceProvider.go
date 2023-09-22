@@ -2,12 +2,17 @@ package providers
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/template/html/v2"
 	"github.com/spf13/viper"
 )
 
 // AppProvider performs application bootstrapping
 func AppProvider() *fiber.App {
-	app := fiber.New()
+	//Using HTML Engine
+	engine := html.New("app/views", ".html")
+	app := fiber.New(fiber.Config{
+		Views: engine,
+	})
 	// Load the application configuration LoadAppConfig()
 	LoadAppConfig()
 	// Register routes

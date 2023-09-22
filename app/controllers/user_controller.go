@@ -1,35 +1,29 @@
 package controllers
 
 import (
-	"eventsapp/app/services"
+	"GoFiberMVC/app/repositories"
 	"github.com/gofiber/fiber/v2"
-	"net/url"
 )
 
 // UserController handles user-related requests
 type UserController struct {
 	// Controller dependencies or services can be injected here
+	clientRepo *repositories.ClientRepository
 }
 
 // Index handles the GET request for listing users
 func (c *UserController) Index(ctx *fiber.Ctx) error {
-	// Logic to fetch and return a list of users
-	//var fruits = [3]string{"apple", "banana", "orange"}
-	curl := &services.CurlService{}
-	params := url.Values{}
-	keyValuePairs := map[string]string{
-		"user_id": "9813142703",
-		"mpin":    "1234",
+	// Load all clients
+	if clientList, err := c.clientRepo.LoadAll(); err == nil {
+		return ctx.Render("index", fiber.Map{
+			"Title":   "Hello, World!",
+			"Clients": clientList,
+		})
 	}
-	headers := map[string]string{}
-	// Add key-value pairs to the params object
-	for key, value := range keyValuePairs {
-		params.Add(key, value)
-	}
-	resp, _ := curl.Post("https://ncash.niloofardigital.com.np/api/client/login", params, headers)
-	//return ctx.JSON(fruits)
-	return ctx.JSON(resp)
-	//	return ctx.SendString("List of users")
+	// Render index template
+	return ctx.Render("index", fiber.Map{
+		"Title": "Error",
+	})
 }
 
 // Show handles the GET request for retrieving a single user
