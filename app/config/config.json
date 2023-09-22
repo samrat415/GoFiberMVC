@@ -1,0 +1,32 @@
+{
+  "oauth": {
+    "privateKey": "app/public/assets/oauth-private.key",
+    "publicKey": "app/public/assets/oauth-public.key",
+    "dbHost": "192.168.40.12",
+    "dbUsername": "root",
+    "dbPassword": "P@ssw0rd",
+    "dbName": "sulav_pay",
+    "dbPort" : 3306
+  },
+  "responseMessages": {
+    "success": "Operation completed successfully.",
+    "error": "An error occurred during the operation.",
+    "404": "Resource Not Found"
+  },
+  "resourceURL": "https://ncash.online/storage/",
+  "defaultImage": "https://ncash.online/storage/service_icon/default-user.jpg",
+  "throttle": {
+    "max" : 2,
+    "time": 1
+  },
+  "votingResource": {
+    "url": "103.168.87.54",
+    "eventList": "/api/event/list",
+    "denominationList": "/api/denomination/list",
+    "voteParticipant": "/api/vote/participant",
+    "voteHistory": "/api/vote/history",
+    "eventCategory": "/api/category",
+    "groupList": "/api/event/group/list",
+    "participantList": "/api/event/participant/list"
+  }
+}
